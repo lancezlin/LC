@@ -1,5 +1,6 @@
 library(httr)
 library(jsonlite)
+source("app.properties")
 
 getUrl <- function(inv_id = NULL, reqType = NULL, version = "v1"){
   base = "https://api.lendingclub.com/api/investor/"
@@ -18,3 +19,9 @@ getUrl <- function(inv_id = NULL, reqType = NULL, version = "v1"){
   }
 }
 
+myurl <- getUrl()
+###########test##############
+myJson <- GET(myurl, add_headers(Authorization=.lc.api.key, Accept="text/plain"))
+mycsv <- content(myJson)
+myjs <- fromJSON(content(myJson))
+###########test##############
