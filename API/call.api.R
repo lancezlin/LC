@@ -19,9 +19,9 @@ getUrl <- function(inv_id = NULL, reqType = NULL, version = "v1"){
   }
 }
 
-myurl <- getUrl()
+
 ###########test##############
-myJson <- GET(myurl, add_headers(Authorization=.lc.api.key, Accept="text/plain"))
-mycsv <- content(myJson)
-myjs <- fromJSON(content(myJson))
+myurl <- getUrl()
+myJson <- GET(myurl, add_headers(Authorization=.lc.api.key, Accept="application/json"))
+myCsv <- fromJSON(content(myJson, "text"))$loans
 ###########test##############
