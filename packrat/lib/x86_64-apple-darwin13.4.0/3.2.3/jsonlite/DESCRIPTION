@@ -28,6 +28,6 @@ Date/Publication: 2015-11-28 09:38:27
 Built: R 3.2.2; x86_64-apple-darwin13.4.0; 2015-11-29 12:45:42 UTC;
     unix
 Archs: jsonlite.so.dSYM
-InstallAgent: packrat 0.4.6.1
+InstallAgent: packrat 0.4.6.12
 InstallSource: CRAN
 Hash: 4a983f753b6e88ae0f5a6ac152d8cc32

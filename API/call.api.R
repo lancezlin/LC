@@ -38,7 +38,11 @@ getData <- function(acceptType="application/json"){
 
 ###########test##############
 # myurl <- getUrl()
-# myJson <- GET(myurl, add_headers(Authorization=.lc.api.key, Accept="application/json"))
+# myJson <- GET(myurl, add_headers(Authorization=.lc.api.key, Accept="application/json"), query=list(showAll=TRUE))
 # myCsv <- as.data.frame(fromJSON(content(myJson, "text"))$loans)
-mycsv <- getData()
-###########test##############
+# mycsv <- getData()
+# library(ggplot2)
+# p <- ggplot(mycsv, aes(purpose, fundedAmount)) + geom_bar(stat = "sum", show.legend=FALSE)
+# p
+# ###########test##############
+

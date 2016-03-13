@@ -19,6 +19,6 @@ Packaged: 2015-12-24 01:56:20 UTC; jcheng
 Repository: CRAN
 Date/Publication: 2015-12-29 07:54:49
 Built: R 3.2.3; ; 2015-12-30 10:09:38 UTC; unix
-InstallAgent: packrat 0.4.6.1
+InstallAgent: packrat 0.4.6.12
 InstallSource: CRAN
 Hash: 7ccc01f4d22d73d0d9b0d2a7781e7ff6
