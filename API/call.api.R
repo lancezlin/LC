@@ -24,7 +24,7 @@ getUrl <- function(inv_id = NULL, reqType = NULL, version = "v1"){
 getData <- function(acceptType="application/json"){
   myUrl <- getUrl()
   myJson <- tryCatch(
-    GET(myUrl, add_headers(Authorization=.lc.api.key, Accept=acceptType)),
+    GET(myUrl, add_headers(Authorization=.lc.api.key, Accept=acceptType), query=list(showAll=TRUE)),
     error = function(e) e
   )
   if (inherits(myJson, "error")) {
