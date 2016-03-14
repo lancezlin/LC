@@ -20,16 +20,14 @@ shinyServer(function(input, output, session) {
     )
   })
 
-  observe({
-    how_many_terms <- unique(loan.data()$term)
-    updateSelectInput(session, "terms", choices = how_many_terms, selected = "")
-  })
+observe({
+  how_many_terms <- unique(loan.data()$term)
+  updateSelectInput(session, "terms", choices = how_many_terms, selected = "")
+})
 
 output$dailyLoan <- renderTable({
   loan.data() %>%
     subset(., term==input$terms)
-    #ggplot(loanData, aes(purpose, fundedAmount)) + geom_bar(stat = "sum", show.legend=FALSE)
-    
 })
-  
+
 })

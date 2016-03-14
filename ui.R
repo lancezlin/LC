@@ -14,9 +14,8 @@ shinyUI(fluidPage(
     )
   ),
   
-  # Show a plot of the generated distribution
+  # Show a table of the active loans
   mainPanel(
-    #plotOutput("distPlot"),
     tableOutput("dailyLoan")
   )
 ))
