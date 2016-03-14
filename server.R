@@ -6,7 +6,7 @@ source("API/call.api.R")
 source("app.properties")
 source("Common/load.data.R")
 source("Common/backend.log.R")
-
+#
 REFRESH_INTERVAL <- 60*60*1000
 logging.initial("LC data loading")
 LC.logger <- getLogger("LC")
