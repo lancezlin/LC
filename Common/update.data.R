@@ -6,7 +6,7 @@ update.data <- function(){
   data.list <- list()
   
   data.list$loanData <- getData()
-  loginfo("update loan data at ", Sys.time())
+  loginfo(paste0("update loan data at ", Sys.time()))
   
   return(data.list)
 }

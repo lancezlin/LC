@@ -11,6 +11,11 @@ shinyUI(fluidPage(
       "terms",
       "Select terms:",
       choices = ""
+    ),
+    radioButtons(
+      "choose.grade",
+      "select grades:",
+      choices = ""  
     )
   ),
   

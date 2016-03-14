@@ -21,13 +21,18 @@ shinyServer(function(input, output, session) {
   })
 
 observe({
-  how_many_terms <- unique(loan.data()$term)
+  how_many_terms <- sort(unique(loan.data()$term))
   updateSelectInput(session, "terms", choices = how_many_terms, selected = "")
+})
+
+observe({
+  grades <- sort(unique(loan.data()$grade))
+  updateRadioButtons(session, "choose.grade", choices = grades, selected = "")
 })
 
 output$dailyLoan <- renderTable({
   loan.data() %>%
-    subset(., term==input$terms)
+    subset(., term==input$terms & grade==input$choose.grade)
 })
 
 })
