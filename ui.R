@@ -11,11 +11,16 @@ shinyUI(fluidPage(
       "terms",
       "Select terms:",
       choices = ""
+    ),
+    radioButtons(
+      "choose.grade",
+      "select grades:",
+      choices = ""  
     )
   ),
   
   # Show a table of the active loans
   mainPanel(
-    tableOutput("dailyLoan")
+    DT::dataTableOutput("dailyLoan")
   )
 ))

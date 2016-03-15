@@ -2,11 +2,12 @@ library(shiny)
 library(ggplot2)
 library(logging)
 library(magrittr)
+library(DT)
 source("API/call.api.R")
 source("app.properties")
 source("Common/load.data.R")
 source("Common/backend.log.R")
-
+#
 REFRESH_INTERVAL <- 60*60*1000
 logging.initial("LC data loading")
 LC.logger <- getLogger("LC")
@@ -21,13 +22,18 @@ shinyServer(function(input, output, session) {
   })
 
 observe({
-  how_many_terms <- unique(loan.data()$term)
+  how_many_terms <- sort(unique(loan.data()$term))
   updateSelectInput(session, "terms", choices = how_many_terms, selected = "")
 })
 
-output$dailyLoan <- renderTable({
+observe({
+  grades <- sort(unique(loan.data()$grade))
+  updateRadioButtons(session, "choose.grade", choices = grades, selected = "")
+})
+
+output$dailyLoan <- DT::renderDataTable({
   loan.data() %>%
-    subset(., term==input$terms)
+    subset(., term==input$terms & grade==input$choose.grade)
 })
 
 })
