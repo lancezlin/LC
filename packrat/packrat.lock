@@ -1,5 +1,5 @@
 PackratFormat: 1.4
-PackratVersion: 0.4.6.12
+PackratVersion: 0.4.6.1
 RVersion: 3.2.3
 Repos: CRAN=https://cran.rstudio.com/
 
@@ -8,6 +8,11 @@ Source: CRAN
 Version: 0.1
 Hash: 66d3d04d40c505e567c1328eae0409ee
 Requires: magrittr, htmltools, htmlwidgets
+
+Package: MASS
+Source: CRAN
+Version: 7.3-45
+Hash: 0650d5701aa7e369e77c9e2c8e1dc913
 
 Package: R6
 Source: CRAN
@@ -48,7 +53,7 @@ Package: ggplot2
 Source: CRAN
 Version: 2.0.0
 Hash: 5befb1e7a9c7d0692d6c35fa02a29dbf
-Requires: digest, gtable, plyr, scales, reshape2
+Requires: digest, gtable, plyr, scales, reshape2, MASS, proto
 
 Package: gtable
 Source: CRAN
@@ -65,12 +70,12 @@ Package: htmlwidgets
 Source: CRAN
 Version: 0.5
 Hash: 0aa33e8666baac6fcff4e376789b9c2e
-Requires: jsonlite, htmltools, yaml
+Requires: jsonlite, yaml, htmltools
 
 Package: httpuv
 Source: CRAN
 Version: 1.3.3
-Hash: d440b2e539ccef77b9105051291a7628
+Hash: ad41c96192683a69d291a45192ec8e2b
 Requires: Rcpp
 
 Package: httr
@@ -125,6 +130,11 @@ Source: CRAN
 Version: 1.8.3
 Hash: e38fe93fa50135fac98421abb43bbfea
 Requires: Rcpp
+
+Package: proto
+Source: CRAN
+Version: 0.3-10
+Hash: 05d7ad64db29a39d1b02c4b9f1f4edb2
 
 Package: reshape2
 Source: CRAN

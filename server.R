@@ -5,6 +5,8 @@ library(magrittr)
 library(DT)
 source("API/call.api.R")
 source("app.properties")
+source("Common/update.data.R")
+source("Common/asynch.data.R")
 source("Common/load.data.R")
 source("Common/backend.log.R")
 #

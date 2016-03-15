@@ -28,6 +28,6 @@ Date/Publication: 2015-08-04 00:32:50
 Built: R 3.2.0; x86_64-apple-darwin13.4.0; 2015-08-04 09:46:35 UTC;
     unix
 Archs: httpuv.so.dSYM
-InstallAgent: packrat 0.4.6.12
+InstallAgent: packrat 0.4.6.1
 InstallSource: CRAN
-Hash: d440b2e539ccef77b9105051291a7628
+Hash: ad41c96192683a69d291a45192ec8e2b
