@@ -21,6 +21,6 @@ shinyUI(fluidPage(
   
   # Show a table of the active loans
   mainPanel(
-    tableOutput("dailyLoan")
+    DT::dataTableOutput("dailyLoan")
   )
 ))
