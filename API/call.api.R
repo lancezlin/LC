@@ -1,5 +1,6 @@
 library(httr)
 library(jsonlite)
+library(downloader)
 source("app.properties")
 
 ## function 1
@@ -21,8 +22,7 @@ getUrl <- function(inv_id = NULL, reqType = NULL, version = "v1"){
 }
 
 ## function 2
-getData <- function(acceptType="application/json"){
-  myUrl <- getUrl()
+getData <- function(myUrl, acceptType="application/json"){
   myJson <- tryCatch(
     GET(myUrl, add_headers(Authorization=.lc.api.key, Accept=acceptType), query=list(showAll=TRUE)),
     error = function(e) e
@@ -36,6 +36,29 @@ getData <- function(acceptType="application/json"){
   return(myData)
 }
 
+## function 3
+getHistData <- function(dlUrl, zip.file.name){
+  if (dir.exists(paste(getwd(), "rdata",  sep = "/"))) {
+    print("rdata dir already exists.")
+  }
+  else{
+    dir.create(paste(getwd(), "rdata", sep = "/"))
+  }
+  data.path <- paste(getwd(), "rdata", sep = "/")
+  if (!file.exists(paste(data.path, zip.file.name, sep = "/"))) {
+    setwd(data.path)
+    download(dlUrl, zip.file.name, mode = "wb")
+    response.data <- read.csv(unzip(zip.file.name, exdir = "./"), skip = 1, header = TRUE)
+    file.remove(zip.file.name)
+    setwd("..")
+  }
+  else{
+    stop("zip file hasn't been removed last time.")
+  }
+  return(response.data)
+}
+
+
 ###########test##############
 # myurl <- getUrl()
 # myJson <- GET(myurl, add_headers(Authorization=.lc.api.key, Accept="application/json"), query=list(showAll=TRUE))
@@ -43,6 +66,6 @@ getData <- function(acceptType="application/json"){
 # mycsv <- getData()
 # library(ggplot2)
 # p <- ggplot(mycsv, aes(purpose, fundedAmount)) + geom_bar(stat = "sum", show.legend=FALSE)
-# p
+# p <- getHistData("https://resources.lendingclub.com/LoanStats3a.csv.zip", "LoanStats3a.csv.zip")
 # ###########test##############
 
