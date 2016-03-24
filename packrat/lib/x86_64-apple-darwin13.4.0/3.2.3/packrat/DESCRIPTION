@@ -21,6 +21,6 @@ Packaged: 2015-11-04 19:52:03 UTC; kevin
 Repository: CRAN
 Date/Publication: 2015-11-05 08:31:55
 Built: R 3.2.3; ; 2016-01-07 18:46:43 UTC; unix
-InstallAgent: packrat 0.4.6.1
+InstallAgent: packrat 0.4.6.12
 InstallSource: CRAN
 Hash: 29eacc43b096c5b1a82c8d54a49b030b

@@ -99,6 +99,6 @@ Maintainer: Winston Chang <winston@rstudio.com>
 Repository: CRAN
 Date/Publication: 2016-02-17 22:02:46
 Built: R 3.2.3; ; 2016-02-18 11:32:09 UTC; unix
-InstallAgent: packrat 0.4.6.1
+InstallAgent: packrat 0.4.6.12
 InstallSource: CRAN
 Hash: a4c82c31676563094608d7b5b6495088

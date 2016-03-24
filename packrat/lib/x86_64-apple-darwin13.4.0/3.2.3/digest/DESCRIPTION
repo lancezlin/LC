@@ -37,6 +37,6 @@ Repository: CRAN
 Date/Publication: 2014-12-31 07:47:27
 Built: R 3.2.3; x86_64-apple-darwin13.4.0; 2016-03-09 05:58:04 UTC;
     unix
-InstallAgent: packrat 0.4.6.1
+InstallAgent: packrat 0.4.6.12
 InstallSource: CRAN
 Hash: de202f956596a476d09304e3a2ebf1e5

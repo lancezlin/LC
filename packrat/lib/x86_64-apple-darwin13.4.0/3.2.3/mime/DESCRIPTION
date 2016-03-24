@@ -21,6 +21,6 @@ Date/Publication: 2015-09-03 12:20:19
 Built: R 3.2.0; x86_64-apple-darwin13.4.0; 2015-09-04 13:19:30 UTC;
     unix
 Archs: mime.so.dSYM
-InstallAgent: packrat 0.4.6.1
+InstallAgent: packrat 0.4.6.12
 InstallSource: CRAN
 Hash: b08c52dae92a0a11e64a4deea032ec33
