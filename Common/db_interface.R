@@ -1,12 +1,14 @@
 library(RMySQL)
+source("app.properties")
 
 getDataFromDB <- function(query){
   conn <- dbConnect(MySQL(),
                     user = .lc.db.user, password = .lc.db.pass, 
                     dbname = .lc.db.name, host = .lc.db.host)
-  reponse <- dbSendQuery(conn, query)
+  response <- dbSendQuery(conn, query)
   results <- fetch(response)
   dbDisconnect(conn)
+  return(results)
 }
 
 writeDataToDB <- function(db.table, df, expr){
@@ -18,3 +20,8 @@ writeDataToDB <- function(db.table, df, expr){
                row.names=FALSE)
   dbDisconnect(conn)
 }
+
+###################test####################
+data <- getDataFromDB("select * from lcLoanListing;")
+
+###################test####################
