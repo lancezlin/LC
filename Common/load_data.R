@@ -1,4 +1,4 @@
-load.data.tables <- function(refresh.interval, data.location, logger, app.name=basename(getwd()), post.load.expr=NULL){
+load_data_tables <- function(refresh.interval, data.location, logger, app.name=basename(getwd()), post.load.expr=NULL){
   reactive({
     invalidateLater(refresh.interval, session = NULL)
     logger$info("Loading data tables")

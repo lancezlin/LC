@@ -2,7 +2,7 @@ source("API/call.api.R")
 
 
 ## update data function
-update.data <- function(){
+update_data <- function(){
   data.list <- list()
   
   data.list$loanData <- getData(getUrl())

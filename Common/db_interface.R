@@ -12,6 +12,7 @@ getDataFromDB <- function(query){
 }
 
 writeDataToDB <- function(db.table, df, expr){
+  df$time_stamp <- Sys.Date()
   conn <- dbConnect(MySQL(),
                     user = .lc.db.user, password = .lc.db.pass, 
                     dbname = .lc.db.name, host = .lc.db.host)

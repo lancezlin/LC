@@ -3,17 +3,15 @@ library(ggplot2)
 library(logging)
 library(magrittr)
 library(DT)
-source("API/call.api.R")
+source("API/call_api.R")
 source("app.properties")
-source("Common/update.data.R")
-source("Common/asynch.data.R")
-source("Common/load.data.R")
-source("Common/backend.log.R")
+source("Common/load_data.R")
+source("Common/backend_log.R")
 #
 REFRESH_INTERVAL <- 60*60*1000
 logging.initial("LC data loading")
 LC.logger <- getLogger("LC")
-loaded.Data <- load.data.tables(REFRESH_INTERVAL, .data.file.location, LC.logger)
+loaded.Data <- load_data_tables(REFRESH_INTERVAL, .data.file.location, LC.logger)
 
 shinyServer(function(input, output, session) {
   loan.data <- reactive({

@@ -29,6 +29,12 @@ Source: CRAN
 Version: 1.1-2
 Hash: c0d56cd15034f395874c870141870c25
 
+Package: RMySQL
+Source: CRAN
+Version: 0.10.8
+Hash: 2f393aa7862c60301ac5d70daf72730d
+Requires: DBI
+
 Package: Rcpp
 Source: CRAN
 Version: 0.12.2
@@ -74,7 +80,7 @@ Package: dygraphs
 Source: CRAN
 Version: 0.8
 Hash: 3aa8f282d2096ba49123716e2304af7b
-Requires: magrittr, htmlwidgets, xts, zoo
+Requires: magrittr, zoo, xts, htmlwidgets
 
 Package: ggplot2
 Source: CRAN

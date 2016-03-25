@@ -1,6 +1,6 @@
 library(dygraphs)
 
-source("Common/load.data.R")
+source("Common/load_data.R")
 
 # dygraphs application
   #
