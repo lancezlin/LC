@@ -5,16 +5,18 @@ shinyUI(fluidPage(
   # nav list panel
   navlistPanel(
     "title",
+    fluid = TRUE,
+    widths = c(2, 8),
     #tab 1
     tabPanel(
       "subtitle1",
       tabsetPanel(
         "subsubtitle1",
-        tabPanel("plot",
+        tabPanel("Plot 1",
                  DT::dataTableOutput("dailyLoan")
                  ),
-        tabPanel(""),
-        tabPanel("")
+        tabPanel("Plot 2"),
+        tabPanel("Plot 3")
       )
     ),
     #tab 2
