@@ -39,3 +39,5 @@ output$dailyLoan <- DT::renderDataTable({
 })
 
 })
+
+logging.close()
