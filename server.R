@@ -8,6 +8,9 @@
 library(shiny)
 
 shinyServer(function(input, output) {
+   observeEvent(input$submit_button, {
+      toggle("Plot 1")
+   })
    
   output$distPlot <- renderPlot({
     
