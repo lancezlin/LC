@@ -18,7 +18,8 @@ shinyUI(pageWithSidebar(
                 "Number of bins:",
                 min = 1,
                 max = 50,
-                value = 30)
+                value = 30),
+    actionButton("submit_button", lable = "Submit")
   ),
   
   # Show a plot of the generated distribution
