@@ -7,3 +7,4 @@ bc.update.data.tables.R
 bc.update.data.tables.mod.R
 rdata
 packrat/lib*/
+log
